@@ -531,6 +531,145 @@
             margin-top: 0.25rem;
         }
 
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: #0052CC;
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 82, 204, 0.2);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #0052CC, #2684FF);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .pricing-subtitle {
+            color: #64748b;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-price {
+            margin-bottom: 2rem;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0052CC;
+            display: block;
+            line-height: 1;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .pricing-features {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .pricing-features h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0052CC;
+            text-align: center;
+        }
+
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #374151;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-button {
+            display: inline-block;
+            width: 100%;
+            padding: 16px 24px;
+            background: #e5e7eb;
+            color: #374151;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .pricing-button:hover {
+            background: #d1d5db;
+            transform: translateY(-2px);
+        }
+
+        .pricing-button.featured {
+            background: linear-gradient(135deg, #0052CC, #2684FF);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 82, 204, 0.3);
+        }
+
+        .pricing-button.featured:hover {
+            box-shadow: 0 8px 24px rgba(0, 82, 204, 0.4);
+        }
+
         /* CTA Section */
         .cta-banner {
             background: linear-gradient(135deg, #0052CC, #2684FF);
@@ -692,8 +831,8 @@
                 <ul class="nav-menu">
                     <li><a href="#features">Recursos</a></li>
                     <li><a href="#screenshots">Funcionalidades</a></li>
-                    <li><a href="#testimonials">Clientes</a></li>
                     <li><a href="#pricing">Planos</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
@@ -752,7 +891,7 @@
                 
                 <div class="feature-card">
                     <div class="feature-icon">👩‍💼</div>
-                    <h3>Secretária Virtual 24h</h3>
+                    <h3>AIva: Secretária Virtual 24h</h3>
                     <p>Assistente de IA que gerencia agendamentos, responde perguntas frequentes, confirma consultas e mantém pacientes informados automaticamente.</p>
                 </div>
                 
@@ -764,8 +903,8 @@
                 
                 <div class="feature-card">
                     <div class="feature-icon">🩺</div>
-                    <h3>Assistente Médico IA</h3>
-                    <p>Suporte inteligente para decisões clínicas, alertas de medicamentos, interações e recomendações baseadas em evidências científicas.</p>
+                    <h3>JAImes: Assistente Médico IA</h3>
+                    <p>O mordomo digital do médico — com inteligência artificial e uma interação humanizada, sempre pronto para consultar a agenda, responder dúvidas sobre pacientes, anexar documentos ao prontuário e muito mais.</p>
                 </div>
                 
                 
@@ -782,6 +921,11 @@
                     <h3>Suporte Humano Personalizado</h3>
                     <p>Suporte técnico humano e próximo, com equipe qualificada para entender as necessidades da sua clínica. Atendimento personalizado, sempre feito por pessoas — nunca por robôs."</p>
                 </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #e0f2fe, #bae6fd); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem; border: 1px solid #0284c7;">
+                <h4 style="color: #0284c7; margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700;">🏆 38 Anos de Tradição + Inovação em IA</h4>
+                <p style="color: #075985; font-size: 1.1rem; line-height: 1.6;">Sistema consolidado e testado por milhares de médicos | Compliant com LGPD e Certificações de Segurança | Suporte técnico especializado</p>
             </div>
         </div>
     </section>
@@ -893,57 +1037,135 @@
         </div>
     </section>
 
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Escolha o Plano Ideal</h2>
+                <p class="section-subtitle">Soluções flexíveis para clínicas de todos os tamanhos, do consultório individual às grandes redes médicas</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Essencial -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Essencial</h3>
+                        <p class="pricing-subtitle">Ideal para consultórios individuais</p>
+                        <div class="pricing-price">
+                            <span class="price-amount">R$ 129,90</span>
+                            <span class="price-period">por profissional / mês</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <h4>Plano Básico</h4>
+                        <ul>
+                            <li>✓ Prontuário eletrônico</li>
+                            <li>✓ Receituário digital</li>
+                            <li>✓ Teleconsulta</li>
+                            <li>✓ Confirmação de consulta por WhatsApp</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="pricing-button">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Profissional -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Profissional</h3>
+                        <p class="pricing-subtitle">Para médicos que querem mais eficiência</p>
+                        <div class="pricing-price">
+                            <span class="price-amount">R$ 249,90</span>
+                            <span class="price-period">por profissional / mês</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <h4>Tudo do plano Essencial +</h4>
+                        <ul>
+                            <li>✓ Prontuário com transcrição inteligente com IA</li>
+                            <li>✓ Módulos de especialidade gratuitos</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="pricing-button">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Empresarial (Destacado) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Mais Popular</div>
+                    <div class="pricing-header">
+                        <h3>Empresarial</h3>
+                        <p class="pricing-subtitle">Plano avançado completo</p>
+                        <div class="pricing-price">
+                            <span class="price-amount">R$ 349,90</span>
+                            <span class="price-period">por profissional / mês</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <h4>Tudo do plano Profissional +</h4>
+                        <ul>
+                            <li>✓ Secretária de IA</li>
+                            <li>✓ Assistente médico</li>
+                            <li>✓ Teleconsulta ilimitada</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="pricing-button featured">Contratar</a>
+                    </div>
+                </div>
+
+                <!-- Personalizado -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Personalizado</h3>
+                        <p class="pricing-subtitle">Para 10 ou mais profissionais de saúde</p>
+                    </div>
+                    <div class="pricing-features">
+                        <h4>Plano premium/customizado</h4>
+                        <ul>
+                            <li>✓ Tudo do plano Profissional +</li>
+                            <li>✓ Descontos progressivos</li>
+                            <li>✓ Configurações personalizadas</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#contact" class="pricing-button">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="testimonials" id="testimonials">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Médicos que Confiam no MEDC</h2>
+                <h2 class="section-title">Depoimentos</h2>
                 <p class="section-subtitle">Mais de 1.000 médicos já transformaram a relação com seus pacientes usando nossa tecnologia</p>
             </div>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"A IA do MEDC revolucionou meu consultório. O preenchimento automático do prontuário e as sugestões de diagnóstico me poupam 40% do tempo em cada consulta. O atendimento via WhatsApp reduziu drasticamente as faltas dos pacientes."</p>
+                    <p class="testimonial-text">"Sou cliente MEDC desde sua primeira versão e sempre gostei do programa. Prova disto é que recentemente adquiri a última versão e o que era bom ficou melhor. O atendimento e o suporte são ótimos, os funcionários sempre educados e prontos para nos ajudar. As confirmações de lembretes da agenda funcionam perfeitamente e todo o programa é fácil de utilizar. Enfim, um programa médico que recomendo."</p>
                     <div class="testimonial-author">Dr. Paulo Antônio Machado</div>
-                    <div class="testimonial-role">Cardiologista - Belo Horizonte/MG</div>
+                    <div class="testimonial-role">Cardiologista - Belo Horizonte/MG ⭐⭐⭐⭐⭐</div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Migrei mais de 20 mil fichas do CADCLIN para o MEDC sem perder nenhum dado. A secretária virtual atende os pacientes mesmo fora do horário comercial, e os relatórios me ajudam a tomar decisões estratégicas importantes."</p>
+                    <p class="testimonial-text">"Sou usuário do MEDC desde 2002 e tenho mais de 20 mil fichas de pacientes no programa. A nova versão é muito boa e a transferência de dados foi realizada de maneira rápida e sem problemas. O novo programa está facilitando o agendamento de consultas, tornando meu atendimento mais ágil e o controle financeiro ficou muito fácil. O atendimento técnico é excelente e os poucos problemas que tive foram prontamente atendidos. Satisfação total!"</p>
                     <div class="testimonial-author">Dr. Maurício Costa e Peixoto</div>
-                    <div class="testimonial-role">Otorrinolaringologista - Hospital Actual</div>
+                    <div class="testimonial-role">Otorrinolaringologista - Hospital Actual ⭐⭐⭐⭐⭐</div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"O MEDC superou todas as expectativas. A agenda inteligente otimiza automaticamente os horários, e o app mobile me permite acompanhar tudo mesmo quando estou fora do consultório. É o futuro da medicina digital."</p>
-                    <div class="testimonial-author">Dra. Ana Paula Ferreira</div>
-                    <div class="testimonial-role">Endocrinologista - São Paulo/SP</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"A integração com WhatsApp foi um divisor de águas. Nossos pacientes adoram receber lembretes automáticos e poder tirar dúvidas básicas com a secretária virtual. A taxa de no-show caiu para menos de 5%."</p>
-                    <div class="testimonial-author">Dr. Roberto Silva</div>
-                    <div class="testimonial-role">Ortopedista - Rio de Janeiro/RJ</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Como gestora de uma clínica com 5 médicos, o MEDC nos deu controle total sobre a operação. Os relatórios em tempo real e a automação de processos aumentaram nossa eficiência em 60%."</p>
+                    <p class="testimonial-text">"Utilizamos o MEDC no consultório da Dra Susana da Matta Machado Fernandes. A agenda nos atende perfeitamente, facilitando e agilizando o atendimento ao paciente. Estamos mais familiarizados com as mudanças que modernizaram esse atendimento. Muito importante tem sido o suporte, que nos atende prontamente sempre que precisamos."</p>
                     <div class="testimonial-author">Eleni Fernandes</div>
-                    <div class="testimonial-role">Gestora - Clínica Médica Integrada</div>
+                    <div class="testimonial-role">Consultório Dra. Susana da Matta Machado</div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"O assistente médico com IA é como ter um colega experiente sempre disponível. As alertas sobre interações medicamentosas e sugestões baseadas em evidências científicas elevaram a qualidade do meu atendimento."</p>
-                    <div class="testimonial-author">Dr. Lucas Mendes</div>
-                    <div class="testimonial-role">Clínico Geral - Brasília/DF</div>
-                </div>
-            </div>
-            
-            <div style="background: linear-gradient(135deg, #e0f2fe, #bae6fd); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem; border: 1px solid #0284c7;">
-                <h4 style="color: #0284c7; margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700;">🏆 38 Anos de Tradição + Inovação em IA</h4>
-                <p style="color: #075985; font-size: 1.1rem; line-height: 1.6;">Sistema consolidado e testado por milhares de médicos | Compliant com LGPD e Certificações de Segurança | Suporte técnico especializado</p>
             </div>
         </div>
     </section>
+
 
     <section class="cta-banner">
         <div class="section-container">
