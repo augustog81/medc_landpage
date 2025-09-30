@@ -383,7 +383,7 @@
 
         .screenshot-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -774,12 +774,9 @@
             }
 
             .features-grid,
+            .screenshot-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .screenshot-grid {
-                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -821,10 +818,6 @@
                 padding: 60px 0;
             }
 
-            .screenshot-grid {
-                grid-template-columns: 1fr;
-            }
-
             .cta-banner {
                 padding: 60px 0;
             }
@@ -845,8 +838,8 @@
             </a>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#features">IA Médica</a></li>
-                    <li><a href="#screenshots">Recursos</a></li>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#screenshots">Funcionalidades</a></li>
                     <li><a href="#pricing">Planos</a></li>
                     <li><a href="#testimonials">Depoimentos</a></li>
                     <li><a href="#contact">Contato</a></li>
@@ -894,7 +887,7 @@
     <section class="features" id="features">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">IA Médica</h2>
+                <h2 class="section-title">Recursos Inovadores com IA</h2>
                 <p class="section-subtitle">Automatize processos, melhore o atendimento e tome decisões mais inteligentes com nossa tecnologia de ponta</p>
             </div>
             
@@ -902,19 +895,40 @@
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
                     <h3>Prontuário Inteligente</h3>
-                    <p>Assistente inteligente que transcreve automaticamente as consultas e preenche o prontuário em tempo real durante a consulta. Gera a anamnese de forma estruturada, com sugestão de CID e resumo inteligente, otimizando o tempo médico com precisão e eficiência.</p>
+                    <p>Assistente inteligente que transcreve e preenche o prontuário de forma automática durante a consulta, otimizando o tempo médico com precisão e eficiência.</p>
                 </div>
-
+                
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
                     <h3>AIva: Secretária Virtual 24h</h3>
                     <p>Assistente de IA que atende seus pacientes diretamente pelo WhatsApp 💬, gerenciando agendamentos, respondendo perguntas frequentes, confirmando consultas e mantendo pacientes informados automaticamente.</p>
                 </div>
-
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>WhatsApp Integrado</h3>
+                    <p>Confirmações automáticas, lembretes personalizados e comunicação direta com pacientes através da plataforma mais usada no Brasil.</p>
+                </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">🩺</div>
                     <h3>JAImes: Assistente Médico IA</h3>
                     <p>O mordomo digital do médico — com inteligência artificial e uma interação humanizada, sempre pronto para consultar a agenda, responder dúvidas sobre pacientes, anexar documentos ao prontuário e muito mais.</p>
+                </div>
+                
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>100% na Nuvem</h3>
+                    <p>Acesso seguro de qualquer dispositivo via navegador, totalmente compatível com mobile. Backup automático, sincronização em tempo real e conformidade com LGPD.</p>
+                </div>
+                
+                
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Suporte Humano Personalizado</h3>
+                    <p>Suporte técnico humano e próximo, com equipe qualificada para entender as necessidades da sua clínica. Atendimento personalizado, sempre feito por pessoas — nunca por robôs."</p>
                 </div>
             </div>
             
@@ -928,285 +942,104 @@
     <section class="screenshots" id="screenshots">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Recursos</h2>
-                <p class="section-subtitle">Recursos completos para gestão inteligente da sua clínica médica</p>
+                <h2 class="section-title">Veja o MEDC em Ação</h2>
+                <p class="section-subtitle">Interface moderna e intuitiva com agenda, prontuário, receituário e demais funcionalidades para maximizar produtividade médica</p>
             </div>
             
             <div class="screenshot-grid">
-                <!-- Dashboard + Relatórios -->
                 <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <div class="mock-ui">
-                            <div class="mock-header">
-                                <div class="mock-title">Dashboard + Relatórios</div>
-                                <div class="mock-buttons">
-                                    <div class="mock-btn" style="background: #ef4444;"></div>
-                                    <div class="mock-btn" style="background: #f59e0b;"></div>
-                                    <div class="mock-btn" style="background: #10b981;"></div>
-                                </div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-bottom: 0.5rem;">
-                                <div style="background: #3b82f6; color: white; padding: 0.4rem; border-radius: 6px; text-align: center; font-size: 0.6rem; font-weight: 600;">280 Pacientes</div>
-                                <div style="background: #10b981; color: white; padding: 0.4rem; border-radius: 6px; text-align: center; font-size: 0.6rem; font-weight: 600;">45 Hoje</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem; margin-bottom: 0.5rem;">
-                                <div style="background: #f3f4f6; padding: 0.3rem; border-radius: 4px; text-align: center; font-size: 0.5rem;">
-                                    <div style="font-weight: 600; color: #059669;">R$ 45.280</div>
-                                    <div style="color: #64748b;">Faturamento</div>
-                                </div>
-                                <div style="background: #f3f4f6; padding: 0.3rem; border-radius: 4px; text-align: center; font-size: 0.5rem;">
-                                    <div style="font-weight: 600; color: #dc2626;">R$ 12.150</div>
-                                    <div style="color: #64748b;">Despesas</div>
-                                </div>
-                            </div>
-                            <div style="background: #f9fafb; height: 15px; border-radius: 4px; position: relative; overflow: hidden;">
-                                <div style="background: linear-gradient(90deg, #10b981, #059669); height: 100%; width: 70%; border-radius: 4px;"></div>
-                            </div>
-                        </div>
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px;">
+                        <img src="img/dashboard.jpeg" alt="Dashboard Inteligente" style="width: 100%; height: calc(100% - 40px); object-fit: cover; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.3); filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));">
                     </div>
                     <div class="screenshot-content">
-                        <h4>Dashboard + Relatórios</h4>
-                        <p>Visão completa da clínica com métricas em tempo real e análises financeiras integradas</p>
+                        <h4>Dashboard Inteligente</h4>
+                        <p>Visão completa da clínica com métricas em tempo real, agenda do dia e alertas importantes</p>
                     </div>
                 </div>
 
-                <!-- Agenda Inteligente -->
                 <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                        <div class="mock-ui">
-                            <div class="mock-header">
-                                <div class="mock-title">Agenda Digital</div>
-                                <div style="background: #059669; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">HOY</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.4rem;">
-                                <div style="background: #f0f9ff; border-left: 3px solid #0284c7; padding: 0.4rem; border-radius: 4px; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">09:00 - João Silva</div>
-                                    <div style="color: #64748b;">Cardiologia ✓</div>
-                                </div>
-                                <div style="background: #fef3c7; border-left: 3px solid #f59e0b; padding: 0.4rem; border-radius: 4px; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">10:30 - Maria Costa</div>
-                                    <div style="color: #64748b;">Dermatologia ⏰</div>
-                                </div>
-                                <div style="background: #f0fdf4; border-left: 3px solid #10b981; padding: 0.4rem; border-radius: 4px; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">14:00 - Ana Santos</div>
-                                    <div style="color: #64748b;">Clínico Geral</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px;">
+                        <img src="img/ia_prontuario.jpeg" alt="Prontuário com IA" style="width: 100%; height: calc(100% - 40px); object-fit: cover; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.3); filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));">
                     </div>
                     <div class="screenshot-content">
-                        <h4>Agenda Inteligente</h4>
-                        <p>Gestão otimizada de horários com confirmações automáticas e encaixes inteligentes</p>
+                        <h4>Prontuário com IA</h4>
+                        <p>Assistente inteligente que transcreve automaticamente as consultas e preenche o prontuário em tempo real. Gera a anamnese de forma estruturada, com sugestão de CID e resumo inteligente</p>
                     </div>
                 </div>
 
-                <!-- Receituário Digital + Memed -->
-                <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);">
-                        <div class="mock-ui">
-                            <div class="mock-header">
-                                <div class="mock-title">Receituário Digital</div>
-                                <div style="background: #0052CC; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">MEMED</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.4rem;">
-                                <div style="background: #ffffff; border: 1px solid #e2e8f0; padding: 0.4rem; border-radius: 4px; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">📋 Paciente: Maria Silva</div>
-                                    <div style="color: #64748b; margin-top: 0.2rem;">💊 Paracetamol 500mg</div>
-                                    <div style="color: #64748b;">🕐 8/8h por 7 dias</div>
-                                </div>
-                                <div style="background: #f0fdf4; border: 1px solid #10b981; padding: 0.4rem; border-radius: 4px; font-size: 0.6rem; text-align: center;">
-                                    <div style="color: #059669; font-weight: 600;">✓ Receita Assinada Digitalmente</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screenshot-content">
-                        <h4>Receituário Digital + Memed</h4>
-                        <p>Prescrições digitais seguras com certificado digital e integração Memed</p>
-                    </div>
-                </div>
-
-                <!-- WhatsApp Integrado -->
                 <div class="screenshot-card">
                     <div class="screenshot-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
                         <div class="mock-ui">
                             <div class="mock-header">
-                                <div class="mock-title">WhatsApp Integrado</div>
-                                <div style="background: #25d366; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">ONLINE</div>
+                                <div class="mock-title">Secretária Virtual WhatsApp</div>
+                                <div style="background: #25d366; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: 600;">ONLINE</div>
                             </div>
                             <div style="padding: 1rem 0;">
-                                <div style="background: #dcf8c6; padding: 8px; border-radius: 8px 8px 2px 8px; margin-bottom: 8px; font-size: 0.6rem; margin-left: 30px;">
-                                    Olá! Confirmando consulta amanhã às 14h?
+                                <div style="background: #dcf8c6; padding: 8px; border-radius: 8px 8px 2px 8px; margin-bottom: 8px; font-size: 0.7rem; margin-left: 40px;">
+                                    Olá! Gostaria de agendar uma consulta para amanhã às 14h?
                                 </div>
-                                <div style="background: #ffffff; padding: 8px; border-radius: 8px 8px 8px 2px; margin-bottom: 8px; font-size: 0.6rem; border: 1px solid #e5e7eb;">
-                                    🤖 Confirmação automática enviada ✓
+                                <div style="background: #ffffff; padding: 8px; border-radius: 8px 8px 8px 2px; margin-bottom: 8px; font-size: 0.7rem; border: 1px solid #e5e7eb;">
+                                    🤖 Claro! Verificando disponibilidade... ✓ Horário confirmado para Maria Silva.
                                 </div>
-                                <div style="background: #e3f2fd; padding: 6px; border-radius: 6px; font-size: 0.5rem; text-align: center; color: #1565c0;">
-                                    💬 Lembrete personalizado agendado
+                                <div style="background: #dcf8c6; padding: 8px; border-radius: 8px 8px 2px 8px; font-size: 0.7rem; margin-left: 40px;">
+                                    Perfeito! Obrigada 😊
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="screenshot-content">
-                        <h4>WhatsApp Integrado</h4>
-                        <p>Confirmações automáticas, lembretes personalizados e comunicação direta com pacientes através da plataforma mais usada no Brasil.</p>
+                        <h4>Secretária Virtual 24/7</h4>
+                        <p>Atendimento automático via WhatsApp para agendamentos, confirmações e informações básicas</p>
                     </div>
                 </div>
 
-                <!-- 100% Compatível Mobile -->
                 <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-                        <div class="mock-ui" style="padding: 0.5rem;">
-                            <div style="background: #ffffff; border-radius: 20px; padding: 0.8rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                    <div style="font-size: 0.7rem; font-weight: 600;">MEDC Mobile</div>
-                                    <div style="width: 20px; height: 12px; background: #10b981; border-radius: 6px; position: relative;">
-                                        <div style="position: absolute; right: 2px; top: 2px; width: 8px; height: 8px; background: white; border-radius: 4px;"></div>
-                                    </div>
-                                </div>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem;">
-                                    <div style="background: #eff6ff; padding: 0.3rem; border-radius: 6px; text-align: center; font-size: 0.5rem;">
-                                        <div style="margin-bottom: 0.2rem;">📅</div>
-                                        <div>Agenda</div>
-                                    </div>
-                                    <div style="background: #f0fdf4; padding: 0.3rem; border-radius: 6px; text-align: center; font-size: 0.5rem;">
-                                        <div style="margin-bottom: 0.2rem;">📋</div>
-                                        <div>Prontuário</div>
-                                    </div>
-                                    <div style="background: #fef3c7; padding: 0.3rem; border-radius: 6px; text-align: center; font-size: 0.5rem;">
-                                        <div style="margin-bottom: 0.2rem;">💊</div>
-                                        <div>Receitas</div>
-                                    </div>
-                                    <div style="background: #fdf2f8; padding: 0.3rem; border-radius: 6px; text-align: center; font-size: 0.5rem;">
-                                        <div style="margin-bottom: 0.2rem;">📊</div>
-                                        <div>Relatórios</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 20px;">
+                        <img src="img/agenda.jpeg" alt="Agenda Inteligente" style="width: 100%; height: calc(100% - 40px); object-fit: cover; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.3); filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));">
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Agenda Inteligente</h4>
+                        <p>Visualização clara dos agendamentos com status de confirmação, encaixes automáticos e otimização de horários</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 20px;">
+                        <img src="img/relatorio.jpeg" alt="Relatórios" style="width: 100%; height: calc(100% - 40px); object-fit: cover; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.3); filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));">
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Relatórios</h4>
+                        <p>Relatórios financeiros, de agendamento e de clientes em poucos cliques. Mais controle e praticidade para sua clínica</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%); padding: 20px;">
+                        <img src="img/receita.jpeg" alt="Receituário Digital + Memed" style="width: 100%; height: calc(100% - 40px); object-fit: cover; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.3); filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));">
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Receituário Digital + Memed</h4>
+                        <p>Receituário on-line com certificado digital + integração Memed para gerar receitas digitais com segurança e validade</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px;">
+                        <img src="img/chat.jpeg" alt="Chat Interno Integrado" style="width: 100%; height: calc(100% - 40px); object-fit: cover; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.3); filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));">
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Chat Interno Integrado</h4>
+                        <p>Chat interno para comunicação entre médicos e secretárias, aumentando agilidade no atendimento e coordenação da equipe</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 20px;">
+                        <img src="img/mobile.jpeg" alt="Acesso Mobile Web" style="width: 100%; height: calc(100% - 40px); object-fit: cover; object-position: top; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.3); filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));">
                     </div>
                     <div class="screenshot-content">
                         <h4>100% Compatível Mobile</h4>
-                        <p>Acesso completo via navegador mobile com interface responsiva e otimizada</p>
-                    </div>
-                </div>
-
-                <!-- 100% na Nuvem -->
-                <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);">
-                        <div class="mock-ui">
-                            <div class="mock-header">
-                                <div class="mock-title">Sistema em Nuvem</div>
-                                <div style="background: #10b981; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">ONLINE</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.4rem;">
-                                <div style="background: #f0f9ff; border: 1px solid #0284c7; padding: 0.4rem; border-radius: 6px; display: flex; align-items: center; gap: 0.3rem; font-size: 0.6rem;">
-                                    <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></div>
-                                    <div>Backup Automático Ativo</div>
-                                </div>
-                                <div style="background: #f0fdf4; border: 1px solid #10b981; padding: 0.4rem; border-radius: 6px; display: flex; align-items: center; gap: 0.3rem; font-size: 0.6rem;">
-                                    <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></div>
-                                    <div>Sincronização em Tempo Real</div>
-                                </div>
-                                <div style="background: #fef3c7; border: 1px solid #f59e0b; padding: 0.4rem; border-radius: 6px; display: flex; align-items: center; gap: 0.3rem; font-size: 0.6rem;">
-                                    <div style="width: 8px; height: 8px; background: #f59e0b; border-radius: 50%;"></div>
-                                    <div>Conformidade LGPD</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screenshot-content">
-                        <h4>100% na Nuvem</h4>
-                        <p>Segurança máxima com backup automático e acesso de qualquer lugar</p>
-                    </div>
-                </div>
-
-                <!-- Suporte Humano Personalizado -->
-                <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);">
-                        <div class="mock-ui">
-                            <div class="mock-header">
-                                <div class="mock-title">Suporte MEDC</div>
-                                <div style="background: #7c3aed; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">HUMANO</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.3rem;">
-                                <div style="background: #ffffff; padding: 0.4rem; border-radius: 6px; border-left: 3px solid #7c3aed; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">Atendente: Carlos</div>
-                                    <div style="color: #64748b;">"Como posso ajudar?"</div>
-                                </div>
-                                <div style="background: #f0f9ff; padding: 0.4rem; border-radius: 6px; border-left: 3px solid #0284c7; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">Você</div>
-                                    <div style="color: #64748b;">"Preciso de ajuda com relatórios"</div>
-                                </div>
-                                <div style="background: #ffffff; padding: 0.4rem; border-radius: 6px; border-left: 3px solid #7c3aed; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">Atendente: Carlos</div>
-                                    <div style="color: #64748b;">"Vou te orientar agora!"</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screenshot-content">
-                        <h4>Suporte Humano Personalizado</h4>
-                        <p>Atendimento especializado por pessoas reais, sempre próximas da sua realidade</p>
-                    </div>
-                </div>
-
-                <!-- Gestão Integrada de Pacientes -->
-                <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);">
-                        <div class="mock-ui">
-                            <div class="mock-header">
-                                <div class="mock-title">Prontuário + IA</div>
-                                <div style="background: #25d366; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">IA</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.3rem;">
-                                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.4rem; border-radius: 6px; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">📋 Transcrição Automática</div>
-                                    <div style="color: #64748b; font-size: 0.5rem;">IA converte fala em texto estruturado</div>
-                                </div>
-                                <div style="background: #dcf8c6; border: 1px solid #25d366; padding: 0.4rem; border-radius: 6px; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">💬 WhatsApp Automático</div>
-                                    <div style="color: #064e3b; font-size: 0.5rem;">AIva agenda e confirma consultas</div>
-                                </div>
-                                <div style="background: #eff6ff; border: 1px solid #3b82f6; padding: 0.4rem; border-radius: 6px; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">🤖 JAImes Assistente</div>
-                                    <div style="color: #1e40af; font-size: 0.5rem;">Mordomo digital do médico</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screenshot-content">
-                        <h4>Gestão Integrada de Pacientes com IA</h4>
-                        <p>Prontuário com IA que transcreve automaticamente + Secretária Virtual 24h via WhatsApp + JAImes assistente médico - tudo integrado em uma solução inteligente</p>
-                    </div>
-                </div>
-
-                <!-- Chat Interno para Equipe -->
-                <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);">
-                        <div class="mock-ui">
-                            <div class="mock-header">
-                                <div class="mock-title">Chat Interno</div>
-                                <div style="background: #ea580c; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600;">EQUIPE</div>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.3rem;">
-                                <div style="background: #fef3c7; padding: 0.4rem; border-radius: 6px; border-left: 3px solid #f59e0b; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">Dr. Silva</div>
-                                    <div style="color: #92400e;">"Paciente das 15h chegou"</div>
-                                </div>
-                                <div style="background: #e0f2fe; padding: 0.4rem; border-radius: 6px; border-left: 3px solid #0284c7; font-size: 0.6rem;">
-                                    <div style="font-weight: 600;">Recepção</div>
-                                    <div style="color: #075985;">"Ok! Já direcionei para a sala 2"</div>
-                                </div>
-                                <div style="background: #f0f9ff; text-align: center; padding: 0.3rem; border-radius: 6px; font-size: 0.5rem; color: #64748b;">
-                                    <div>✓ Mensagem vista por todos</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screenshot-content">
-                        <h4>Chat Interno para Equipe</h4>
-                        <p>Comunicação instantânea entre médicos e equipe para maior agilidade no atendimento</p>
+                        <p>Acesse todos os recursos via navegador mobile com interface totalmente responsiva e otimizada</p>
                     </div>
                 </div>
             </div>
