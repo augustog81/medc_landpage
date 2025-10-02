@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:imedicina.com.br)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

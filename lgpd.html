@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGPD - Proteção de Dados - MEDC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8fafc;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0052CC;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .back-link {
+            background: linear-gradient(135deg, #0052CC, #2684FF);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 82, 204, 0.3);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .page-header .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0052CC;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+
+        .content-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            color: #374151;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0052CC;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .company-info {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .company-info strong {
+            color: #0052CC;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .right-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .right-card h4 {
+            color: #0052CC;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .right-card p {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .container {
+                margin-top: 100px;
+            }
+
+            .rights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <object type="image/svg+xml" data="img/logo.svg" alt="MEDC" class="logo-img"></object>
+            </a>
+            <a href="index.html" class="back-link">← Voltar ao Site</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>🔒 LGPD - Proteção de Dados</h1>
+            <p class="subtitle">Nosso compromisso com a Lei Geral de Proteção de Dados</p>
+        </div>
+
+        <div class="content-section">
+            <div class="company-info">
+                <p><strong>MEDC TECNOLOGIA LTDA</strong></p>
+                <p><strong>CNPJ:</strong> 53.283.021/0001-28</p>
+            </div>
+
+            <h2>O que é a LGPD?</h2>
+            <p>A Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) é a legislação brasileira que regulamenta o tratamento de dados pessoais, tanto no meio digital quanto físico, por pessoas físicas ou jurídicas de direito público ou privado.</p>
+
+            <p>A LGPD entrou em vigor em setembro de 2020 e tem como objetivo proteger os direitos fundamentais de liberdade e privacidade dos titulares de dados.</p>
+
+            <h2>Como o MEDC se Adequa à LGPD</h2>
+            <p>A MEDC TECNOLOGIA LTDA está totalmente comprometida com a conformidade à LGPD. Implementamos políticas, processos e medidas técnicas para garantir a proteção dos dados pessoais processados em nossa plataforma.</p>
+
+            <div class="success-box">
+                <strong>✓ Certificação de Conformidade</strong><br>
+                Nossos processos de tratamento de dados foram revisados e adequados para atender integralmente aos requisitos da LGPD.
+            </div>
+
+            <h3>Nossos Pilares de Conformidade:</h3>
+            <ul>
+                <li><strong>Transparência:</strong> Informamos claramente quais dados coletamos e como os utilizamos</li>
+                <li><strong>Finalidade:</strong> Tratamos dados apenas para propósitos específicos e legítimos</li>
+                <li><strong>Necessidade:</strong> Coletamos apenas os dados estritamente necessários</li>
+                <li><strong>Segurança:</strong> Implementamos medidas técnicas e administrativas robustas</li>
+                <li><strong>Prevenção:</strong> Adotamos práticas para prevenir incidentes de segurança</li>
+                <li><strong>Não Discriminação:</strong> Não tratamos dados para fins discriminatórios</li>
+                <li><strong>Responsabilização:</strong> Demonstramos conformidade e respondemos por nossos processos</li>
+            </ul>
+
+            <h2>Papéis e Responsabilidades</h2>
+
+            <h3>O Profissional de Saúde como Controlador</h3>
+            <p>Quando você utiliza o MEDC, você é o <strong>controlador</strong> dos dados dos seus pacientes. Isso significa que:</p>
+            <ul>
+                <li>Você decide quais dados de pacientes serão coletados e armazenados</li>
+                <li>Você determina a finalidade do tratamento desses dados</li>
+                <li>Você é responsável por obter consentimento dos pacientes quando necessário</li>
+                <li>Você deve atender às solicitações de direitos dos titulares (seus pacientes)</li>
+            </ul>
+
+            <h3>O MEDC como Operador</h3>
+            <p>A MEDC TECNOLOGIA LTDA atua como <strong>operador</strong> dos dados, o que significa que:</p>
+            <ul>
+                <li>Processamos dados conforme suas instruções (do controlador)</li>
+                <li>Implementamos medidas de segurança para proteger os dados</li>
+                <li>Fornecemos ferramentas para que você cumpra suas obrigações como controlador</li>
+                <li>Não utilizamos os dados dos pacientes para outros fins além da prestação do serviço</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Parceria em Conformidade:</strong> Trabalhamos em conjunto para garantir que tanto o controlador (você) quanto o operador (MEDC) cumpram integralmente a LGPD.
+            </div>
+
+            <h2>Seus Direitos como Titular de Dados</h2>
+            <p>A LGPD garante diversos direitos aos titulares de dados pessoais. Como usuário do MEDC, você pode exercer os seguintes direitos em relação aos seus dados cadastrais:</p>
+
+            <div class="rights-grid">
+                <div class="right-card">
+                    <h4>1. Confirmação e Acesso</h4>
+                    <p>Confirmar se tratamos seus dados e acessá-los de forma clara e completa.</p>
+                </div>
+
+                <div class="right-card">
+                    <h4>2. Correção</h4>
+                    <p>Corrigir dados incompletos, inexatos ou desatualizados a qualquer momento.</p>
+                </div>
+
+                <div class="right-card">
+                    <h4>3. Anonimização ou Bloqueio</h4>
+                    <p>Solicitar anonimização ou bloqueio de dados desnecessários ou excessivos.</p>
+                </div>
+
+                <div class="right-card">
+                    <h4>4. Eliminação</h4>
+                    <p>Solicitar a eliminação de dados tratados com base no consentimento.</p>
+                </div>
+
+                <div class="right-card">
+                    <h4>5. Portabilidade</h4>
+                    <p>Receber seus dados em formato estruturado e interoperável.</p>
+                </div>
+
+                <div class="right-card">
+                    <h4>6. Informação</h4>
+                    <p>Saber com quais entidades públicas ou privadas compartilhamos dados.</p>
+                </div>
+
+                <div class="right-card">
+                    <h4>7. Revogação</h4>
+                    <p>Revogar o consentimento a qualquer momento.</p>
+                </div>
+
+                <div class="right-card">
+                    <h4>8. Oposição</h4>
+                    <p>Opor-se a tratamento realizado em desconformidade com a LGPD.</p>
+                </div>
+            </div>
+
+            <h2>Bases Legais para Tratamento de Dados</h2>
+            <p>O MEDC trata dados pessoais com base nas seguintes hipóteses legais previstas na LGPD:</p>
+
+            <h3>Para Dados de Usuários (Profissionais de Saúde):</h3>
+            <ul>
+                <li><strong>Execução de Contrato:</strong> Para prestação do serviço contratado (Art. 7º, V)</li>
+                <li><strong>Legítimo Interesse:</strong> Para suporte técnico e melhorias no sistema (Art. 7º, IX)</li>
+                <li><strong>Obrigação Legal:</strong> Para cumprimento de obrigações fiscais e regulatórias (Art. 7º, II)</li>
+            </ul>
+
+            <h3>Para Dados Sensíveis de Saúde (Pacientes):</h3>
+            <ul>
+                <li><strong>Tutela da Saúde:</strong> Para prestação de serviços de saúde (Art. 11, II, "a")</li>
+                <li><strong>Proteção da Vida:</strong> Em situações emergenciais (Art. 11, II, "g")</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Atenção Profissionais de Saúde:</strong> É sua responsabilidade obter o consentimento adequado dos pacientes quando necessário, especialmente para finalidades que não sejam estritamente relacionadas ao atendimento de saúde.
+            </div>
+
+            <h2>Segurança e Proteção de Dados</h2>
+            <p>Implementamos medidas técnicas e organizacionais abrangentes para proteger dados pessoais:</p>
+
+            <h3>Medidas Técnicas:</h3>
+            <ul>
+                <li>Criptografia de dados em trânsito (TLS 1.3) e em repouso (AES-256)</li>
+                <li>Controle de acesso baseado em função (RBAC)</li>
+                <li>Autenticação multifator (2FA)</li>
+                <li>Monitoramento contínuo de segurança 24/7</li>
+                <li>Firewall de aplicação web (WAF)</li>
+                <li>Proteção contra ataques DDoS</li>
+                <li>Backup automático com redundância geográfica</li>
+                <li>Testes de penetração e auditorias periódicas</li>
+            </ul>
+
+            <h3>Medidas Organizacionais:</h3>
+            <ul>
+                <li>Política de Segurança da Informação</li>
+                <li>Treinamento regular de equipe em proteção de dados</li>
+                <li>Processo de gestão de incidentes</li>
+                <li>Avaliação de impacto à proteção de dados (DPIA)</li>
+                <li>Contratos com cláusulas de proteção de dados com fornecedores</li>
+                <li>Processo de resposta a violações de dados</li>
+            </ul>
+
+
+            <h2>Encarregado de Proteção de Dados (DPO)</h2>
+            <p>Designamos um Encarregado de Proteção de Dados (Data Protection Officer - DPO) responsável por:</p>
+            <ul>
+                <li>Aceitar reclamações e comunicações dos titulares</li>
+                <li>Prestar esclarecimentos e adotar providências</li>
+                <li>Receber comunicações da Autoridade Nacional de Proteção de Dados (ANPD)</li>
+                <li>Orientar funcionários e colaboradores sobre práticas de proteção de dados</li>
+            </ul>
+
+            <div class="company-info">
+                <p><strong>Encarregado de Proteção de Dados (DPO)</strong></p>
+                <p><strong>Nome:</strong> A ser designado</p>
+                <p><strong>E-mail:</strong> dpo@medc.com.br</p>
+                <p><strong>Telefone:</strong> (31) 9 9187-9497</p>
+            </div>
+
+            <h2>Tratamento de Dados de Menores</h2>
+            <p>O MEDC pode processar dados de pacientes menores de idade sob responsabilidade do profissional de saúde. Nesses casos:</p>
+            <ul>
+                <li>O consentimento deve ser obtido pelos pais ou responsáveis legais</li>
+                <li>Dados de crianças e adolescentes recebem proteção especial</li>
+                <li>O melhor interesse da criança deve sempre prevalecer</li>
+            </ul>
+
+            <h2>Transferência Internacional de Dados</h2>
+            <p>Os dados são armazenados em servidores localizados no Brasil. Não realizamos transferência internacional rotineira de dados.</p>
+            <p>Caso seja necessária alguma transferência internacional, garantiremos que:</p>
+            <ul>
+                <li>O país de destino ofereça grau de proteção adequado (conforme ANPD)</li>
+                <li>Sejam implementadas salvaguardas apropriadas (cláusulas contratuais padrão)</li>
+                <li>Haja transparência sobre a transferência</li>
+            </ul>
+
+            <h2>Resposta a Incidentes de Segurança</h2>
+            <p>Mantemos um plano de resposta a incidentes que inclui:</p>
+            <ol>
+                <li><strong>Detecção:</strong> Monitoramento contínuo para identificar incidentes</li>
+                <li><strong>Contenção:</strong> Ações imediatas para limitar o impacto</li>
+                <li><strong>Investigação:</strong> Análise da causa raiz e extensão do incidente</li>
+                <li><strong>Notificação:</strong> Comunicação à ANPD e aos titulares afetados, quando aplicável</li>
+                <li><strong>Recuperação:</strong> Restauração de sistemas e dados</li>
+                <li><strong>Lições Aprendidas:</strong> Melhoria contínua dos processos de segurança</li>
+            </ol>
+
+            <div class="highlight-box">
+                <strong>Compromisso de Transparência:</strong> Em caso de incidente que possa causar risco ou dano relevante aos titulares, comunicaremos em prazo razoável e adotaremos todas as medidas cabíveis.
+            </div>
+
+            <h2>Como Exercer seus Direitos</h2>
+            <p>Para exercer seus direitos de titular de dados ou obter esclarecimentos sobre o tratamento de dados no MEDC:</p>
+
+            <h3>Canais de Atendimento:</h3>
+            <ul>
+                <li><strong>E-mail do DPO:</strong> dpo@medc.com.br</li>
+                <li><strong>E-mail Geral:</strong> contato@medc.com.br</li>
+                <li><strong>WhatsApp:</strong> (31) 9 9187-9497</li>
+            </ul>
+
+            <h3>Prazo de Resposta:</h3>
+            <p>Responderemos às solicitações em até <strong>15 dias úteis</strong>, podendo ser prorrogado por mais 15 dias mediante justificativa.</p>
+
+            <h3>Gratuidade:</h3>
+            <p>O atendimento das solicitações é gratuito. Em caso de requisições manifestamente infundadas ou excessivas, podemos cobrar valor razoável ou recusar o atendimento.</p>
+
+            <h2>Autoridade Nacional de Proteção de Dados (ANPD)</h2>
+            <p>A ANPD é o órgão responsável por zelar, implementar e fiscalizar o cumprimento da LGPD no Brasil.</p>
+
+            <div class="company-info">
+                <p><strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong></p>
+                <p><strong>Site:</strong> <a href="https://www.gov.br/anpd" target="_blank" style="color: #0052CC;">www.gov.br/anpd</a></p>
+                <p><strong>Ouvidoria:</strong> Disponível no site oficial</p>
+            </div>
+
+            <p>Caso você não esteja satisfeito com nossas respostas ou processos, você tem o direito de apresentar reclamação à ANPD.</p>
+
+            <h2>Atualizações desta Página</h2>
+            <p>Esta página pode ser atualizada periodicamente para refletir mudanças em nossas práticas de proteção de dados ou na legislação.</p>
+            <p>Recomendamos a consulta regular desta página para se manter informado sobre como protegemos seus dados.</p>
+
+            <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; font-size: 0.9rem; color: #64748b;">
+                <strong>Última atualização:</strong> Janeiro de 2025
+            </p>
+
+            <div class="success-box" style="margin-top: 2rem;">
+                <strong>💚 Nosso Compromisso</strong><br>
+                A proteção dos seus dados e dos dados dos seus pacientes é nossa prioridade máxima. Trabalhamos continuamente para garantir os mais altos padrões de segurança e conformidade com a LGPD.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
